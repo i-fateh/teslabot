@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Tesla Show</title>
+</head>
+<body>
+
+  <!-- MESSAGE AUX RECRUTEURS :)
+    Ce code a été ecris il y a déja quelques années
+    Je le laisse dans l'état afin de garder une trace de mes progrès -->
+
+
+    <video autoplay muted loop id="myVideo">
+        <source src="./video/tesla.mp4" type="video/mp4">
+        Your browser does not support HTML5 video.
+      </video>
+
+      <span>
+        <h2 class="boutonVid">Tesla Bot</h2>
+        <p>The new era for AI and Robotics</p>
+        <a href="home.html"><p class="btn">Discover me</p></a>
+      </span>
+
+      <script>
+        var video = document.getElementById("myVideo");
+        var btn = document.getElementById("myBtn");
+        
+        function myFunction() {
+          if (video.paused) {
+            video.play();
+            btn.innerHTML = "Pause";
+          } else {
+            video.pause();
+            btn.innerHTML = "Play";
+          }
+        }
+        </script>
+    
+</body>
+</html>

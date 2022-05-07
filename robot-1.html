@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Tesla Bot 1</title>
+</head>
+<body>
+    <div class="container2">
+        <div class="robots">
+            <a href="home.html"><img src="./images/logo.jpeg" class="logo"></a>
+            <img onclick="load1()" id="r1" src="./images/avatar1.jpeg">
+            <img onclick="load2()" id="r2" src="./images/avatar2.jpeg">
+            <img onclick="load3()" id="r3" src="./images/avatar3.jpeg">
+        </div>
+        <img id="robot1" src="./images/tesla-bot-robot.jpeg" width="85%">
+
+    </div>
+
+    <script>
+        let robot1 = document.getElementById('robot1')
+        function load1(){
+            robot1.src = "./images/tesla-bot-robot.jpeg"
+        } 
+        function load2(){
+            robot1.src = "./images/tesla-bot-robot-ai-2.jpeg";
+        }
+        function load3(){
+            robot1.src = "./images/tesla-bot-robot-ai-3.jpeg";
+        }     
+    </script>
+
+</body>
+</html>

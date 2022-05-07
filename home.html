@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Tesla Bot</title>
+</head>
+<body>
+
+    <div class="container">
+        <div class="box"></div>
+        <div class="boutonBox">
+            <h1>Tesla Bot</h1>
+            <h4>
+                <figcaption>Elon Musk, <cite><blockquote>'For a world created by and for humans'</blockquote></cite></figcaption>
+            </h4>
+            <button onmouseover="newRobot()" onmouseout="newRobot2()" class="btn-2"><a href="robot-1.html"><span>Specifications</span></a></button>
+        </div>
+    </div>
+
+    <script>
+        const el = document.querySelector(".box");
+        el.addEventListener("mousemove", (e) => {
+        el.style.backgroundPositionX = -e.offsetX/30 + "px";
+        // el.style.transform = "scale(1.02)"
+        el.style.backgroundPositionY = e.offsetY/40 + "px";
+        });
+
+        function newRobot(){
+            document.querySelector('.box').style.backgroundImage = "url(./images/tesla.jpeg)";
+        }
+
+        function newRobot2(){
+            document.querySelector('.box').style.backgroundImage = "url(./images/tesla-bot.jpeg)";
+        }
+    </script>
+
+
+</body>
+</html>
