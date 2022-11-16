@@ -1,4 +1,8 @@
-/* MESSAGE AUX RECRUTEURS :)
+/*  MESSAGE TO RECRUITERS :)
+    This code was written some time ago
+    I leave it as is to keep track of my progress
+    
+    MESSAGE AUX RECRUTEURS :)
     Ce code a été ecris il y a déja quelques années
     Je le laisse dans l'état afin de garder une trace de mes progrès
 */
@@ -10,30 +14,33 @@
  a:hover { color: red; transition: .3s;}
  .container { background-color: transparent; display: flex; align-items: center; justify-content: center; }
  .box {
-     background-image: url('./tesla-bot.jpeg');
+     background-image: url('./images-tesla/tesla-bot.jpeg');
      background-size: cover;
      background-repeat: no-repeat;
-     width: 70vw;
+     width: 100vw;
      height: 100vh;
-     transition: .4s;
+     transition: .4s ;
      animation-duration: 2s;
      animation-name: slidein;
  }
 
-  @keyframes slidein {
-    from {
-      opacity: 0;
-    }
-    to {
-      opacity: 1;
-    }
-  }
-
  .boutonBox { 
-    background-color: transparent; width: 30vw; height: 100vh;
-    display: flex; align-items: center; justify-content:center; flex-direction: column;
+    width: 600px; height: 600px;
+    display: flex; align-items: center; justify-content: center;
+    padding: 20px;
+    flex-direction: column;
     animation-duration: 6s;
     animation-name: slideBouton;
+    position: absolute; bottom: 0px; 
+}
+
+@keyframes slidein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
 
 @keyframes slideBouton {
@@ -129,9 +136,10 @@
       display: flex; align-items: center; justify-content: flex-start;
   }
 
-  .robots{ display: flex; align-items: center; justify-content: center; flex-direction: column;background-color: rgb(255, 255, 255); width: 12vw; height: 100vh; }
+  .robots{ display: flex; align-items: center; justify-content: center; flex-direction: column; 
+    background-color: rgb(255, 255, 255); width: auto; height: 100vh; }
   .robots img { height: 700px}
-  #r1, #r2, #r3 { border-radius: 50%; width: 100px; height: 100px !important; margin: 30px 0px;
+  #r1, #r2, #r3 { border-radius: 50%; width: 120px; height: 120px !important; margin: 30px;
     animation-duration: .5s;
     animation-name: avatar; transition: .5s; filter: drop-shadow(0 0 0.65rem rgb(154, 154, 154));
     }
@@ -179,10 +187,12 @@
 
   #robot1 { 
     animation-duration: 3s;
-    animation-name:load ;
+    animation-name:load ; width: 100%; height: auto !important;
   } 
 
-  .logo { width: 80px; height: 80px !important; margin-bottom: 90px; margin-top: -50px;}
+  .logo { width: 80px; height: 80px !important; 
+    position: absolute; top:30px; left: 30px
+  }
 
   * {
     box-sizing: border-box;
@@ -221,27 +231,32 @@
     color: black;
   }
 
+
+  .boxBtnVid{
+    position: absolute; bottom: 40px;
+    width: 600px;
+    height: 300px;
+    text-align: center;
+  }
+
   .boutonVid {
-      position: absolute;
-      bottom: 110px;
       color: white; font-size: 4em;
+      line-height: 0px;
       animation-duration: 3s;
       animation-name:load ;
   }
   p {
-    position: absolute;
-    bottom: 80px;
     color: white; font-size: 2em;
     animation-duration: 4s;
     animation-name:load ;
   }
 
   .btn {
-    position: absolute;
-    bottom: 30px;
-    color: red; font-size: 2em;
+    color: red; font-size: 3em;
     animation-duration: 4.5s;
-    animation-name:load; transition: .2s;
+    animation-name:load; transition: .2s; 
+    position: relative;
+    bottom: 30px;
   }
   .btn:hover {
       color: white; transition: .4s;
@@ -264,4 +279,77 @@ blockquote p::before {
 
 blockquote p::after {
     content: '\201D';
+}
+
+@media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
+  /* Styles pour cette Media Queries */
+  .container { display: flex; 
+    flex-direction: column; 
+  }
+
+  .box {
+    background-image: url('./images-tesla/tesla-bot.jpeg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 100vw;
+    height: 100vh;
+    transition: .4s ;
+    animation-duration: 2s;
+    animation-name: slidein;
+}
+
+  .boutonBox { 
+    width: 100%; height: 100%;
+    display: flex; align-items: center; justify-content: flex-end;
+  }
+  .boutonBox h1 { text-align: center; font-size: 3em;}
+  .boutonBox h4 { text-align: center;}
+
+  .boxBtnVid{
+    position: absolute; bottom: 0px;
+    padding-top: 30px;
+    width: 100%;
+    height: 300px;
+    background-color: rgba(0, 0, 0, 0.307) !important;
+  }
+  .boxBtnVid p {
+    font-size: 1.5em;
+    padding: 0px 20px;
+  }
+
+  .boutonVid {
+    color: white; font-size: 3em;
+    animation-duration: 3s;
+    animation-name:load;
+  }
+
+  .btn {
+    color: red; font-size: 2em;
+    animation-duration: 4.5s;
+    animation-name:load; transition: .2s;
+    margin-top: 30px;
+  }
+
+  .robots{ display: flex; align-items: center; justify-content: center; 
+    flex-direction: row; 
+    width: 100vw; height: auto; position: absolute; bottom: 0px; 
+  }
+
+  #r1, #r2, #r3 { 
+    border-radius: 50%; width: 80px; height: 80px !important; 
+    margin: 10px 20px;
+    animation-duration: .5s;
+    animation-name: avatar; transition: .5s; filter: drop-shadow(0 0 0.65rem rgb(154, 154, 154));
+  }
+  .logo{
+    width: 40px; height: 40px !important;
+    position: absolute;
+    top: 30px; 
+    outline: solid 4px white;
+  }
+
+  #robot1 { height: 100px}
+
+
 }
